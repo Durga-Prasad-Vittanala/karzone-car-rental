@@ -1,0 +1,519 @@
+/* CAR DETAIL PAGE */
+
+.detail-page-container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 24px 16px;
+  background: #000000;
+  box-sizing: border-box;
+}
+
+.detail-content-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* BACK BUTTON */
+
+.detail-back-button {
+  position: absolute;
+  top: 4px;
+  left: 16px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  background: #1f2937;
+  border: 1px solid #374151;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.detail-back-button:hover {
+  background: #374151;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.detail-back-button-icon {
+  color: #fb923c;
+  font-size: 18px;
+}
+
+/* MAIN LAYOUT */
+
+.detail-main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 48px;
+}
+
+.detail-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.detail-right-column {
+  width: 100%;
+}
+
+/* IMAGE CAROUSEL */
+
+.image-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #374151;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.detail-car-image {
+  display: block;
+  width: 100%;
+  height: 256px;
+  object-fit: cover;
+}
+
+/* Carousel Indicators */
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: #6b7280;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+  background: #f97316;
+  transform: scale(1.15);
+}
+
+/* CAR INFORMATION */
+
+.detail-car-name {
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(to right, #fb923c, #f97316);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.detail-car-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4ade80;
+}
+
+.price-per-day {
+  font-size: 16px;
+  font-weight: 400;
+  color: #9ca3af;
+}
+
+/* CAR SPECIFICATIONS */
+
+.detail-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.detail-spec-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(31, 41, 55, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid #374151;
+  transition: all 0.3s ease;
+}
+
+.detail-spec-card:hover {
+  border-color: #f97316;
+  transform: translateY(-3px);
+}
+
+.detail-spec-icon {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.detail-spec-label {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.detail-spec-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Specification icon colors */
+
+.seats-icon {
+  color: #fb923c;
+}
+
+.fuel-icon {
+  color: #4ade80;
+}
+
+.mileage-icon {
+  color: #facc15;
+}
+
+.transmission-icon {
+  color: #c084fc;
+}
+
+/* ABOUT SECTION */
+
+.about-section {
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(31, 41, 55, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid #374151;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.about-text {
+  font-size: 14px;
+  color: #d1d5db;
+  line-height: 1.7;
+}
+
+/* BOOKING CARD */
+
+.booking-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(31, 41, 55, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid #374151;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
+}
+
+.booking-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.booking-title1 {
+  color: #fb923c;
+}
+
+.booking-subtitle {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* BOOKING FORM */
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.booking-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: #d1d5db;
+}
+
+/* INPUT CONTAINER */
+
+.input-container {
+  position: relative;
+  min-width: 0;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.input-container.active {
+  border-color: #f97316;
+}
+
+.input-container:focus-within {
+  border-color: #f97316;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.15);
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  padding-left: 2px;
+  transform: translateY(-50%);
+  color: #fb923c;
+  pointer-events: none;
+}
+
+.input-field,
+.text-input-field {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 8px 8px 40px;
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 14px;
+  outline: none;
+  border: none;
+}
+
+.text-input-field {
+  padding-right: 12px;
+}
+
+.input-field::placeholder,
+.text-input-field::placeholder {
+  color: #9ca3af;
+}
+
+.input-field option {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+/* PRICE BREAKDOWN */
+
+.price-breakdown {
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(55, 65, 81, 0.4);
+  border: 1px solid #4b5563;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  color: #d1d5db;
+  gap: 10px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4px;
+  border-top: 1px solid #4b5563;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* BOOKING SUBMIT BUTTON */
+
+.booking-submit-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #fb923c, #f97316);
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.booking-submit-button:hover {
+  background: linear-gradient(to right, #f97316, #ea580c);
+
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.25);
+  transform: translateY(-2px);
+}
+
+.booking-button-icon {
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.booking-submit-button:hover .booking-button-icon {
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (min-width: 640px) {
+  .detail-page-container {
+    padding: 24px;
+  }
+
+  .detail-car-image {
+    height: 320px;
+  }
+
+  .detail-car-name {
+    font-size: 30px;
+  }
+
+  .detail-car-price {
+    font-size: 24px;
+  }
+
+  .detail-spec-card {
+    padding: 16px;
+  }
+
+  .detail-spec-icon {
+    font-size: 24px;
+  }
+
+  .detail-spec-label {
+    font-size: 14px;
+  }
+
+  .detail-spec-value {
+    font-size: 18px;
+  }
+
+  .about-section {
+    padding: 24px;
+  }
+
+  .about-title {
+    font-size: 24px;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
+
+  .booking-card {
+    padding: 24px;
+  }
+
+  .booking-title {
+    font-size: 24px;
+  }
+
+  .form-label {
+    font-size: 14px;
+  }
+
+  .input-field,
+  .text-input-field {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .detail-car-image {
+    height: 384px;
+  }
+
+  .detail-car-name {
+    font-size: 36px;
+  }
+
+  .detail-car-price {
+    font-size: 30px;
+  }
+
+  .booking-grid-2 {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .detail-main-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .detail-left-column {
+    width: 66.666667%;
+  }
+
+  .detail-right-column {
+    width: 33.333333%;
+  }
+}
+
+/* SMALL MOBILE SCREENS */
+
+@media (max-width: 480px) {
+  .detail-page-container {
+    padding: 20px 12px;
+  }
+
+  .detail-main-layout {
+    gap: 24px;
+  }
+
+  .booking-card {
+    padding: 16px;
+  }
+
+  .booking-grid-2 {
+    gap: 8px;
+  }
+
+  .detail-specs-grid {
+    gap: 10px;
+  }
+
+  .detail-car-image {
+    height: 230px;
+  }
+}

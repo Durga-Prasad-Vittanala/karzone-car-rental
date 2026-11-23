@@ -1,0 +1,353 @@
+/* PAGE CONTAINER */
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 48px 16px 32px;
+  padding-top: 48px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #030712, #000000);
+}
+
+.content-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.header-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 52px;
+}
+
+.header-decoration {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #f59e0b, #f43f5e);
+}
+
+.title {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 8px;
+  font-family: "Cinzel";
+  font-size: 30px;
+  font-weight: 700;
+  background: #fb923c;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  max-width: 672px;
+  margin: 0 auto;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* CAR GRID */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* CAR CARD */
+
+.car-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.45);
+}
+
+.glow-effect {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(
+    circle at center,
+    rgba(249, 115, 22, 0.15),
+    transparent 70%
+  );
+}
+
+.car-card:hover .glow-effect {
+  opacity: 1;
+}
+
+/* CAR IMAGE */
+
+.image-container {
+  position: relative;
+  height: 192px;
+  overflow: hidden;
+}
+
+.car-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.car-card:hover .car-image {
+  transform: scale(1.06);
+}
+
+/* PRICE BADGE */
+
+.price-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  padding: 9px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  color: #fbbf24;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* CARD CONTENT */
+
+.card-content {
+  padding: 16px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.car-name {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.car-type {
+  color: #fb923c;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+/* CAR SPECIFICATIONS */
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spec-icon-container {
+  padding: 6px;
+  border-radius: 8px;
+  background: #334155;
+}
+
+/* BOOK BUTTON */
+
+.metal-btn::before {
+  content: "";
+
+  position: absolute;
+  top: -50%;
+  left: -50%;
+
+  width: 200%;
+  height: 200%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+
+  transform: rotate(25deg);
+  transition: left 0.6s ease;
+}
+
+.metal-btn:hover::before {
+  left: 100%;
+}
+
+.metal-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 28px rgba(255, 106, 0, 0.7);
+}
+
+.metal-btn:active {
+  transform: scale(0.97);
+}
+
+.metal-btn-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* DECORATIVE BACKGROUND */
+
+.decor1 {
+  position: absolute;
+  top: -64px;
+  left: -64px;
+  z-index: 0;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right,
+    rgba(14, 165, 233, 0.1),
+    rgba(20, 184, 166, 0.1)
+  );
+  filter: blur(48px);
+  pointer-events: none;
+}
+
+.decor2 {
+  position: absolute;
+  right: -80px;
+  bottom: -80px;
+  z-index: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right,
+    rgba(245, 158, 11, 0.1),
+    rgba(244, 63, 94, 0.1)
+  );
+  filter: blur(48px);
+  pointer-events: none;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (min-width: 640px) {
+  .page-container {
+    padding: 48px 24px;
+  }
+
+  .header-container {
+    margin-bottom: 48px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+
+  .image-container {
+    height: 208px;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .header-container {
+    margin-bottom: 64px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .grid-container {
+    gap: 40px;
+  }
+
+  .image-container {
+    height: 224px;
+  }
+
+  .card-content {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 380px) {
+  .car-name {
+    font-size: 16px;
+  }
+
+  .car-type {
+    font-size: 12px;
+  }
+
+  .book-button {
+    padding: 10px 14px;
+  }
+}

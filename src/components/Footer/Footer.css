@@ -1,0 +1,431 @@
+/* FOOTER MAIN CONTAINER */
+
+.footer-container {
+  position: relative;
+  background: linear-gradient(to bottom, #030712, #000000);
+  color: #ffffff;
+  padding-top: 64px;
+  overflow: hidden;
+}
+
+/* TOP DECORATIVE ELEMENTS */
+
+.footer-top-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 128px;
+  pointer-events: none;
+}
+
+.footer-circle-1 {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.1);
+  filter: blur(48px);
+}
+
+.footer-circle-2 {
+  position: absolute;
+  top: 0;
+  right: 33.333%;
+  width: 192px;
+  height: 192px;
+  border-radius: 50%;
+  background: rgba(6, 182, 212, 0.1);
+  filter: blur(48px);
+}
+
+.footer-road-line {
+  position: absolute;
+  top: 48px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #ea580c, transparent);
+}
+
+/* INNER CONTAINER */
+
+.footer-inner {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* FOOTER GRID */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 32px;
+}
+
+/* BRAND SECTION */
+
+.footer-brand-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.footer-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2px;
+  text-decoration: none !important;
+  border: none;
+}
+
+.footer-logo-image {
+  display: block;
+  width: 150px;
+  height: 30px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.footer-logo-text {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-left: 12px;
+  font-size: 22px;
+}
+
+.footer-description {
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* SOCIAL ICONS */
+
+.footer-social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1f2937;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer-social-icon:hover {
+  background: #fb923c;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* SECTION TITLES */
+
+.footer-section-title {
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 4px;
+  font-family: "Cinzel";
+}
+
+.footer-underline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: #fb923c;
+}
+
+/* FOOTER LINKS */
+
+.footer-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #9ca3af;
+  font-size: 14px;
+  list-style: none;
+}
+
+.footer-link-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #9ca3af;
+  transition: color 0.3s ease;
+}
+
+.footer-link-item:hover {
+  color: #fb923c;
+}
+
+.footer-bullet {
+  width: 8px;
+  height: 8px;
+  background: #fb923c;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* CONTACT DETAILS */
+
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-contact-icon {
+  color: #fb923c;
+  margin-top: 4px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* BUSINESS HOURS */
+
+.footer-hours-container {
+  margin-top: 16px;
+}
+
+.footer-hours-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.footer-hours-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+/* NEWSLETTER */
+
+.footer-newsletter-text {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.footer-input {
+  width: 100%;
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.footer-input::placeholder {
+  color: #9ca3af;
+}
+
+.footer-input:focus {
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.25);
+}
+
+/* SUBSCRIBE BUTTON */
+
+.footer-subscribe-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  margin-top: 12px;
+  background: #fb923c;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-subscribe-button:hover {
+  background: #f97316;
+  transform: translateY(-3px);
+}
+.footer-subscribe-icon {
+  margin-right: 12px;
+}
+
+/* COPYRIGHT SECTION */
+
+.footer-copyright {
+  border-top: 1px solid #1f2937;
+  margin-top: 40px;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: #6b7280;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer-designer-link {
+  color: #9ca3af;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer-designer-link:hover {
+  color: #a855f7;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (min-width: 640px) {
+  .footer-container {
+    padding-top: 80px;
+  }
+
+  .footer-top-elements {
+    height: 160px;
+  }
+
+  .footer-circle-1 {
+    width: 192px;
+    height: 192px;
+  }
+
+  .footer-circle-2 {
+    width: 256px;
+    height: 256px;
+  }
+
+  .footer-inner {
+    padding: 0 24px;
+  }
+
+  .footer-grid {
+    gap: 40px;
+  }
+
+  .footer-social-icons {
+    gap: 16px;
+  }
+
+  .footer-social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .footer-description,
+  .footer-link-list,
+  .footer-contact-list,
+  .footer-newsletter-text {
+    font-size: 16px;
+  }
+
+  .footer-section-title {
+    font-size: 20px;
+  }
+
+  .footer-underline {
+    width: 64px;
+  }
+
+  .footer-input,
+  .footer-subscribe-button {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+
+  .footer-hours-title {
+    font-size: 16px;
+  }
+
+  .footer-hours-text {
+    font-size: 14px;
+  }
+
+  .footer-copyright {
+    margin-top: 48px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+  }
+
+  .footer-copyright {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-container {
+    padding-top: 96px;
+  }
+
+  .footer-top-elements {
+    height: 192px;
+  }
+
+  .footer-circle-1 {
+    width: 224px;
+    height: 224px;
+  }
+
+  .footer-circle-2 {
+    width: 288px;
+    height: 288px;
+  }
+
+  .footer-inner {
+    padding: 0 32px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 48px;
+  }
+}

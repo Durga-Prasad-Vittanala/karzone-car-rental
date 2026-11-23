@@ -1,0 +1,261 @@
+/* Main hero section */
+
+.karzone-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  min-height: max(600px, 100svh);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #030303;
+  isolation: isolate;
+}
+
+/* Background image container */
+
+.karzone-hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+
+/* Sports car image */
+
+.karzone-hero-car {
+  padding-top: 110px;
+  object-position: center center;
+  display: block;
+  animation: karzone-car-entrance 1.4s ease-out both;
+}
+
+/* Dark overlay */
+
+.karzone-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0.02) 0%,
+      rgba(0, 0, 0, 0.25) 55%,
+      rgba(0, 0, 0, 0.65) 100%
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.38));
+}
+
+/* Glass card */
+
+.karzone-glass-card {
+  width: min(640px, calc(100% - 40px));
+  min-height: 138px;
+  padding: 24px 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: rgba(12, 14, 18, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  backdrop-filter: blur(18px) saturate(115%);
+  -webkit-backdrop-filter: blur(18px) saturate(115%);
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  animation: karzone-card-entrance 1s ease-out both;
+}
+
+/* Text container */
+
+.karzone-hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Small brand label */
+
+.karzone-label {
+  display: block;
+  margin-bottom: 9px;
+  color: #79c9ed;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Heading */
+
+.karzone-hero-text h1 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: clamp(18px, 2vw, 19px);
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+/* Description */
+
+.karzone-hero-text p {
+  margin: 0;
+  color: #c1c1c1;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* See fleet button */
+
+.karzone-see-fleet {
+  min-width: 120px;
+  min-height: 50px;
+  padding: 0 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #ffb35f, #ff693c);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 8px 25px rgba(255, 112, 56, 0.25);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+/* Button hover effect */
+
+.karzone-see-fleet:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.08);
+  box-shadow: 0 12px 30px rgba(255, 112, 56, 0.4);
+}
+
+.karzone-see-fleet:active {
+  transform: translateY(0);
+}
+
+/* Entrance animations */
+
+@keyframes karzone-car-entrance {
+  from {
+    opacity: 0.5;
+    transform: scale(1.04);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes karzone-card-entrance {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .karzone-hero {
+    min-height: 100svh;
+    height: auto;
+    padding: 110px 0 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 28px;
+  }
+
+  .karzone-hero-car {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center 30%;
+    transform: none;
+    animation: carBreathing 8s ease-in-out infinite alternate;
+  }
+
+  .karzone-glass-card {
+    width: calc(100% - 36px);
+    margin-top: 350px;
+    padding: 22px;
+    transform: none;
+    border-radius: 22px;
+  }
+
+  .karzone-hero-text p {
+    font-size: 13px;
+  }
+
+  .karzone-see-fleet {
+    min-width: 105px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .karzone-hero {
+    min-height: 78vh;
+    min-height: 78svh;
+  }
+
+  .karzone-hero-car {
+    object-position: center center;
+  }
+
+  .karzone-glass-card {
+    width: calc(100% - 28px);
+    padding: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    border-radius: 18px;
+  }
+
+  .karzone-hero-text h1 {
+    font-size: 18px;
+  }
+
+  .karzone-hero-text p {
+    font-size: 13px;
+  }
+
+  .karzone-see-fleet {
+    width: 100%;
+    min-height: 46px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .karzone-hero-car,
+  .karzone-glass-card {
+    animation: none;
+  }
+
+  .karzone-see-fleet {
+    transition: none;
+  }
+}

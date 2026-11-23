@@ -1,0 +1,104 @@
+/* KARZONE GLOBAL STYLES */
+
+:root {
+  --mx: 0.5;
+  --my: 0.5;
+
+  --primary-orange: #ff6a00;
+  --secondary-orange: #ff8800;
+
+  --primary-blue: #38bdf8;
+  --secondary-blue: #2563eb;
+
+  --dark-bg: #080808;
+  --card-bg: #151515;
+
+  --text-white: #ffffff;
+  --text-gray: #9ca3af;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--dark-bg);
+  color: var(--text-white);
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* ORANGE METAL BUTTON */
+
+.metal-btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(
+    180deg,
+    #ff6a00 0%,
+    #ff8800 50%,
+    #ff4d00 100%
+  );
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow:
+    0 6px 20px rgba(255, 106, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 640px) {
+
+  .center-path,
+  .side-path,
+  .dot {
+    display: none;
+  }
+
+  .metal-btn {
+    padding: 10px 14px;
+  }
+}
+
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
