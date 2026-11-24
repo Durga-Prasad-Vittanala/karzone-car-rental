@@ -18,7 +18,7 @@
 
 /* BACK BUTTON */
 
-.detail-back-button {
+.back-button {
   position: absolute;
   top: 4px;
   left: 16px;
@@ -35,12 +35,12 @@
   transition: all 0.3s ease;
 }
 
-.detail-back-button:hover {
+.back-button:hover {
   background: #374151;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
-.detail-back-button-icon {
+.back-button-icon {
   color: #fb923c;
   font-size: 18px;
 }

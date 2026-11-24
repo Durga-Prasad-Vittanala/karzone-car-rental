@@ -15,7 +15,16 @@ const ProtectedRoute = ({ children }) => {
   const authToken = localStorage.getItem("authToken");
 
   if (!authToken) {
-    return <Navigate to="/login" replace state={{ from: location.pathname }} />;
+    return (
+  <Navigate
+    to="/login"
+    replace
+    state={{
+      from: location.pathname,
+      car: location.state?.car,
+    }}
+  />
+);
   }
   return children;
 };

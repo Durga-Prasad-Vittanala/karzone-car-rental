@@ -168,7 +168,7 @@ const CarDetail = () => {
           className="back-button"
           type="button"
         >
-          <FaArrowLeft className="back-button-icon" />
+          <FaArrowLeft className="button-icon" />
         </button>
 
         <div className="detail-main-layout">

@@ -39,10 +39,16 @@ const Login = () => {
       pauseOnHover: true,
       draggable: true,
       theme: "colored",
-      onClose: () => {
-        const redirectPath = location.state?.from || "/";
-        navigate(redirectPath, { replace: true });
-      },
+    onClose: () => {
+  const redirectPath = location.state?.from || "/";
+
+  navigate(redirectPath, {
+    replace: true,
+    state: location.state?.car
+      ? { car: location.state.car }
+      : null,
+  });
+},
     });
   };
 
